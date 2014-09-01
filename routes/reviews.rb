@@ -1,6 +1,6 @@
 get "/recipes/:recipe_id/reviews" do
   @recipe = Recipe.find(params[:recipe_id])
-  @reviews = @recipe.reviews
+  @review = @recipe.reviews
   erb :"reviews/reviews_index"
 end
 
@@ -15,23 +15,21 @@ post "/recipes/:recipe_id/reviews/create" do
   erb :"reviews/reviews_create"
 end
 
-get "/reviews/:id/edit" do
-   @review = Review.find(params[:id])
+get "/recipes/:recipe_id/reviews/:review_id/edit" do
+  @recipe = Recipe.find(params[:recipe_id])
+  @review = Review.find(params[:review_id])
   erb :"reviews/reviews_edit"
 end
 
-post "/reviews/:id/update" do
-  @review = Review.find(params[:id])
+post "/recipes/:recipe_id/reviews/:review_id/update" do
+  @recipe = Recipe.find(params[:recipe_id])
+  @review = Review.find(params[:review_id])
   @review.update_attributes({text: params[:text]})
   erb :"reviews/reviews_update"
 end
 
-get "/reviews/:id/delete" do
-  Review.find(params[:id]).delete
+get "/recipes/:recipe_id/reviews/:review_id/delete" do
+  @recipe = Recipe.find(params[:recipe_id])
+  Review.find(params[:review_id]).delete
   erb :"reviews/reviews_delete"
-end
-
-get "/reviews/:id" do
-  @review = Review.find(params[:id])
-  erb :"reviews/reviews_show"
 end
