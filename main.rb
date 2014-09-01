@@ -14,8 +14,8 @@ require_relative "./routes/reviews.rb"
 require_relative "./fill_table.rb"
 
   get "/" do
-    #f = FillTable.new
-    #f.fill_initial_tables
+    f = FillTable.new
+    f.fill_initial_tables
     erb :home
   end
   
