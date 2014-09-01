@@ -1,1 +1,21 @@
-<h1>Review deleted!</h1>
+
+<div id="container">
+  
+  <header>
+    
+    <h1>Review deleted!</h1>
+    
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/recipes">View all recipes</a></li>
+        <li><a href="/recipes/<%= @recipe.id %>">Return to recipe</a></li>
+        <li><a href="/recipes/<%= @recipe.id %>/reviews">Return to reviews for recipe <%= @recipe.name %></a></li>
+      </ul>
+    </nav>
+    
+  </header>
+  
+  <div id="main"></div>
+  
+</div>

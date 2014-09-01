@@ -19,3 +19,4 @@ require_relative "./fill_table.rb"
     erb :home
   end
   
+  binding.pry

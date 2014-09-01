@@ -5,3 +5,22 @@
   <p>Text: <input type="text" name="text" values="<%= @review.text %>"></p>
   
 </form>
+
+<div id="container">
+  
+  <header>
+    
+    <h1>Edit Review</h1>
+    
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/recipes">View all recipes</a></li>
+        <li><a href="/recipes/<%= @recipe.id %>">Return to recipe</a></li>
+        <li><a href="/recipes/<%= @recipe.id %>/reviews">Return to reviews for recipe <%= @recipe.name %></a></li>
+      </ul>
+    </nav>
+    
+  </header>
+  
+</div>

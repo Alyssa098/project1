@@ -1,0 +1,67 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+#container{
+  width: 100%;
+  margin: 0 auto 0 auto;
+  position: relative;
+}
+
+header{
+  background: #5D4157;
+  height: 170px;
+  text-align: center;
+  position: relative;
+}
+
+header nav{
+  border-top: 10px solid #838689;
+  background: #A8CABA;
+  border-bottom: 10px solid #CAD7B2;
+  height: 75px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+}
+
+header nav a{
+  color: #FFFFFF;
+}
+
+header nav ul li{
+  display: inline-block;
+}
+
+#main{
+  background: #EBE3AA;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#recipe{
+  padding-right: 350px;
+  padding-left: 350px;
+  position: relative;
+  text-align: justify;
+}
+
+#recipe img{
+  position: absolute;
+  left: 50%;
+}
+
+table{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table td{
+  border: 1px groove #000000;
+  width: 500px;
+  height: 150px;
+}

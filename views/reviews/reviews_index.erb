@@ -1,11 +1,35 @@
-<h1>Reviews</h1>
+<div id="container">
+  
+  <header>
+    
+    <h1>Reviews</h1>
+    
+    <nav>
+      
+      <ul>
+        <li><a href="/recipes/<%= @recipe.id %>/reviews/new">Add a new review for recipe: <%= @recipe.name %></a></li>
+      </ul>
+      
+    </nav>
+    
+  </header>
+  
+  <div id="main">
+    
+    <% @reviews.each do |r| %>
+    
+      <table>
+        <tr>
+          <td>
+            <a><%= r.text %></a><br/><br/>
+            <a href="/reviews/<%= @recipe.id %>/edit">Edit</a> 
+            <a href="/reviews/<%= @recipe.id %>/delete">Delete</a></br>
+          </td>
+        </tr>
+      </table>
 
-<a href="/recipes/<%= @recipe.id %>/reviews/new">Add a new review for recipe: <%= @recipe.name %></a></br></br>
-
-<% @reviews.each do |r| %>
-
-  <a><%= r.text %></a> 
-  <a href="/reviews/<%= @recipe.id %>/edit">Edit</a> 
-  <a href="/reviews/<%= @recipe.id %>/delete">Delete</a></br>
-
-<% end %>
+    <% end %>
+    
+  </div>
+  
+</div>

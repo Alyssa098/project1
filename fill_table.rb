@@ -1,6 +1,3 @@
-require_relative "./models/ingredient.rb"
-require_relative "./models/recipe.rb"
-require_relative "./models/review.rb"
 
 class FillTable
   

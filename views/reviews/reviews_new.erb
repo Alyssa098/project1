@@ -1,9 +1,27 @@
-<h1>New Review</h1>
-
-<form action="/recipes/<%= @recipe.id %>/reviews/create" method="post">
+<div id="container">
   
-  <p>Text: <input type="text" name="text"></p>
+  <header>
+    
+    <h1>New Review</h1>
+    
+    <nav>
+      <ul>
+        <li><%= @recipe.name %></li>
+      </ul>
+    </nav>
+    
+  </header>
   
-  <input type="submit">
+  <div id="main">
+    
+    <form action="/recipes/<%= @recipe.id %>/reviews/create" method="post">
   
-</form>
+      <p>Text: <input type="text" name="text"></p>
+  
+      <input type="submit">
+  
+    </form>
+    
+  </div>
+  
+</div>

@@ -1,19 +1,45 @@
-<h1><%= @recipe.name %></h1>
-
-  <a href="/recipes/<%= @recipe.id %>/edit">Edit</a>
-  <a href="/recipes/<%= @recipe.id %>/delete">Delete</a></br></br>
+<div id="container">
   
-  <a>Servings: <%= @recipe.servings %></a></br>
-  <a>Prep_time: <%= @recipe.prep_time %></a></br>
-  <a>Cook_time: <%= @recipe.cook_time %></a></br>
-  
-  
-  <h4>Ingredients</h4>
-  
-  <% @recipe.ingredients.each do |i|  %>
-  
-    <a><%= i.name %></a></br>
+  <header>
     
-  <%end %>
+    <h1><%= @recipe.name %></h1>
+    
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/recipes">All Recipes</a></li>
+        <li><a href="/recipes/<%= @recipe.id %>/edit">Edit Recipe</a></li>
+        <li><a href="/recipes/<%= @recipe.id %>/delete">Delete Recipe</a></li>
+        <li><a href="/recipes/<%= @recipe.id %>/reviews">Recipe's Reviews</a></li>
+      </ul>      
+    </nav>
+    
+  </header>
+  
+  <div id="main">
+    
+    <div id="recipe">
       
-</br><a href="/recipes/<%= @recipe.id %>/reviews">See this recipe's reviews.</a>
+      <img src="<%= @recipe.image %>">
+    
+      <a>Servings: <%= @recipe.servings %></a></br>
+      <a>Prep_time: <%= @recipe.prep_time %></a></br>
+      <a>Cook_time: <%= @recipe.cook_time %></a></br>
+  
+  
+      <h4>Ingredients</h4>
+  
+      <% @recipe.ingredients.each do |i|  %>
+  
+        <a><%= i.name %></a></br>
+    
+        <%end %>
+    
+        <h4>Directions</h4>
+    
+        <p><%= @recipe.directions %></p>
+        
+      </div>
+    
+  </div>
+</div>

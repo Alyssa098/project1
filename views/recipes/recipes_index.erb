@@ -1,9 +1,23 @@
-<h1>Recipes</h1>
+<div id="container">
+  
+  <header>
+    
+    <h1>Recipes</h1>
+    
+    <nav>
+      <a href="recipes/new">Add recipe</a></br>
+    </nav>
+    
+  </header>
+  
+  <div id="main">
+    
+    <% @recipes.each do |r| %>
 
-<a href="recipes/new">Add recipe</a></br></br>
-
-<% @recipes.each do |r| %>
-
-  <a href="/recipes/<%= r.id %>"><%= r.name %></a></br>
+      <a href="/recipes/<%= r.id %>"><%= r.name %></a></br>
  
-<% end %>
+    <% end %>
+    
+  </div>
+  
+</div>
