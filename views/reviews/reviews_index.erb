@@ -7,6 +7,9 @@
     <nav>
       
       <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/recipes">View all recipes</a></li>
+        <li><a href="/recipes/<%= @recipe.id %>">Return to recipe</a></li>
         <li><a href="/recipes/<%= @recipe.id %>/reviews/new">Add a new review for recipe: <%= @recipe.name %></a></li>
       </ul>
       
