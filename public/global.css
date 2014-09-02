@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  min-height: 100%;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -13,9 +14,14 @@ html {
 
 header{
   background: #5D4157;
-  height: 170px;
+  height: 200px;
   text-align: center;
   position: relative;
+}
+
+header h1{
+  margin: 0 0;
+  padding: 30px;
 }
 
 header nav{
@@ -41,6 +47,7 @@ header nav ul li{
   text-align: center;
   padding-top: 50px;
   padding-bottom: 50px;
+  min-height: 700px;
 }
 
 #recipe{
@@ -65,3 +72,4 @@ table td{
   width: 500px;
   height: 150px;
 }
+

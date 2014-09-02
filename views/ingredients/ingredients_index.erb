@@ -1,9 +1,26 @@
-<h1>Ingredients</h1>
 
-<h3>Select an ingredient to see the recipes the item is in:</h3>
+<div id="container">
+  
+  <header>
+    
+    <h1>Ingredients</h1>
+    
+    <nav>
+      <ul>
+        <li><a>Select an ingredient to see the recipes the item is in:</a></li>
+      </ul>
+    </nav>
+    
+  </header>
+  
+  <div id="main">
+    
+    <% @ingredients.each do |i| %>
 
-<% @ingredients.each do |i| %>
+    <a href="/ingredients/<%= i.id %>/recipes"><%= i.name %></a></br>
 
-<a href="/ingredients/<%= i.id %>/recipes"><%= i.name %></a></br>
-
-<% end %>
+    <% end %>
+    
+  </div>
+  
+</div>

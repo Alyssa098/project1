@@ -1,11 +1,27 @@
-<h1><%= @ingredient.name.capitalize %></h1>
 
-<% @ingredient.recipes.each do |r| %>
+<div id="container">
+  
+  <header>
+    
+    <h1><%= @ingredient.name.capitalize %></h1>
+    
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/ingredients">Ingredients list</a></li>
+      </ul>
+    </nav>
+    
+  </header>
+  
+  <div id="main">
+    
+    <% @ingredient.recipes.each do |r| %>
 
-  <a><%= r.name %></a></br>
+      <a href="/recipes/<%= r.id %>"><%= r.name %></a></br>
 
-<% end %>
-
-</br><a href="/ingredients">Ingredients list</a></br>
-
-<a href="/">Home</a>
+    <% end %>
+    
+  </div>
+  
+</div>

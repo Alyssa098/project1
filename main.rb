@@ -16,7 +16,9 @@ require_relative "./fill_table.rb"
   get "/" do
     #f = FillTable.new
     #f.fill_initial_tables
+    @recipe = Recipe.all
+    @ingredient = Ingredient.all
     erb :home
   end
   
-  binding.pry
+  
