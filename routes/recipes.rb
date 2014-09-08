@@ -8,7 +8,8 @@ get "/recipes/new" do
 end
 
 post "/recipes/create" do
-  @recipe = Recipe.create({name: params[:name], servings: params[:servings], prep_time: params[:prep_time], cook_time: params[:cook_time]})
+  @recipe = Recipe.create({name: params[:name], image: params[:image], servings: params[:servings], 
+    prep_time: params[:prep_time], cook_time: params[:cook_time], directions: params[:directions]})
   erb :"recipes/recipes_create"
 end
 
@@ -18,8 +19,9 @@ get "/recipes/:id/edit" do
 end
 
 post "/recipes/:id/update" do
-  @recipe = User.find(params[:id])
-  @recipe.update_attributes({name: params[:name], servings: params[:servings], prep_time: params[:prep_time], cook_time: params[:cook_time]})
+  @recipe = Recipe.find(params[:id])
+  @recipe.update_attributes({name: params[:name], image: params[:image], servings: params[:servings], 
+    prep_time: params[:prep_time], cook_time: params[:cook_time], directions: params[:directions]})
   erb :"recipes/recipes_update"
 end
 

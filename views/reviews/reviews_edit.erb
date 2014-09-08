@@ -18,11 +18,12 @@
   
   <div id="main">
     
-    <form action="/recipes/<%= @recipe.id %>/reviews/<%= @review.id %>/update" method="post">
+    <form action="/recipes/<%= @recipe.id %>/reviews/<%= @review.id %>/update" method="post" id="review_form_edit">
   
-      <p>Text: <input type="text" name="text" value="<%= @review.text %>"></p>
+      <p>Text: <input type="text" name="text" id="review_text_edit" value="<%= @review.text %>">
+      <span class="error">Invalid</span></p>
       
-      <input type="submit">
+      <input type="submit" id="edit_submit_button" >
   
     </form>
     

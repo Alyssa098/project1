@@ -1,14 +1,41 @@
-<h1>Edit Recipe</h1>
+<div id="container">
+  
+  <header>
+    
+    <h1>Edit Recipe</h1>
+    
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/recipes">View all recipes</a></li>
+        <li><a href="/recipes/<%= @recipe.id %>">Return to recipe</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div id="main">
 
-<form action="/users/<%= @recipe.id %>/update" method="post">
+    <form action="/recipes/<%= @recipe.id %>/update" method="post" id="recipe_form">
   
-  <p>Name: <input type="text" name="name" value="<%= @recipe.name %>"></p>
+      <p>Name: <input type="text" name="name" id="recipe_name" value="<%= @recipe.name %>">
+      <span class="error">Invalid</span></p>
   
-  <p>Serving Size: <input type="text" name="servings" value="<%= @recipe.servings %>"></p>
+      <p>Image route: <input type="text" name="image" value="<%= @recipe.image %>"></p>
   
-  <p>Prep Time: <input type="text" name="prep_time" value="<%= @recipe.prep_time %>"></p>
+      <p>Serving Size: <input type="text" name="servings" value="<%= @recipe.servings %>"></p>
   
-  <p>Cook Time: <input type="test" name="cook_time" value="<%= @recipe.cook_time %>"></p>
+      <p>Prep Time: <input type="text" name="prep_time" value="<%= @recipe.prep_time %>"></p>
   
-  <input type="submit">
-</form>
+      <p>Cook Time: <input type="text" name="cook_time" value="<%= @recipe.cook_time %>"></p>
+  
+      <p>Directions: <input type="text" name="directions" id="directions" value="<%= @recipe.directions %>">
+      <span class="error">Invalid</span></p>
+  
+      <input type="submit" id="recipe_submit_button" >
+    
+    </form>
+  
+  
+  </div>
+  
+</div>

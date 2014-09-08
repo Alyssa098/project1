@@ -1,15 +1,37 @@
-<h1>New Recipes</h1>
 
-<form action="/recipes/create" method="post">
+<div id="container">
   
-  <p>Name: <input type="text" name="name"></p>
+  <header>
+    
+    <h1>New Recipes</h1>
+    
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/recipes">All recipes</a></li>
+      </ul>
+    </nav>
+    
+  </header>
   
-  <p>Serving Size: <input type="text" name="servings"></p>
+  <div id="main">
+    
+    <form action="/recipes/create" method="post">
   
-  <p>Prep Time: <input type="text" name="prep_time"></p>
+      <p>Name: <input type="text" name="name"></p>
+      
+      <p>Image route: <input type="text" name="image"></p>
   
-  <p>Cook Time: <input type="test" name="cook_time"></p>
+      <p>Serving Size: <input type="text" name="servings"></p>
   
-  <input type="submit">
+      <p>Prep Time: <input type="text" name="prep_time"></p>
   
-</form>
+      <p>Cook Time: <input type="text" name="cook_time"></p>
+  
+      <p>Directions: <input type="text" name="directions"></p>
+  
+      <input type="submit">
+    
+  </div>
+  
+</div>

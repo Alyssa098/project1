@@ -14,11 +14,12 @@
   
   <div id="main">
     
-    <form action="/recipes/<%= @recipe.id %>/reviews/create" method="post">
+    <form action="/recipes/<%= @recipe.id %>/reviews/create" method="post" id="review_form_new">
   
-      <p>Text: <input type="text" name="text"></p>
+      <p>Text: <input type="text" name="text" id="review_text_new">
+      <span class="error">Invalid</span></p>
   
-      <input type="submit">
+      <input type="submit" id="new_submit_button" >
   
     </form>
     
